@@ -19,7 +19,7 @@ def create_vocab_list(data_set):
     return list(vocab_set)
 
 
-def bag_of_words2VecMN(vocab_list, input_set):
+def bag_of_words2Vec(vocab_list, input_set):
     """
     获得文档向量，向量中的数值代表词汇表中的某个单词在一篇文档中的出现次数.
     """
