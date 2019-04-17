@@ -6,6 +6,16 @@ import jieba
 import sklearn
 from sklearn.naive_bayes import MultinomialNB
 import numpy as np
+from sklearn.feature_extraction.text import TfidfTransformer
+from matplotlib import pyplot as plt
+import pandas as pd
+
+
+def check_contain_chinese(check_str):
+    for ch in check_str:
+        if u'\u4e00' <= ch <= u'\u9fff':
+            return True
+    return False
 
 
 def MakeWordsSet(words_file):
@@ -17,9 +27,9 @@ def MakeWordsSet(words_file):
         words_set - 读取的内容的set集合
     """
     words_set = set()
-    with open(words_file, 'r') as fp:
+    with open(words_file, 'r', encoding='utf-8') as fp:
         for line in fp.readlines():
-            word = line.strip().decode("utf-8")
+            word = line.strip()
             if len(word) > 0 and word not in words_set:  # 去重
                 words_set.add(word)
     return words_set
@@ -44,49 +54,50 @@ def TextProcessing(folder_path, test_size=0.2):
 
     # 类间循环
     for folder in folder_list:
-        new_folder_path = os.path.join(folder_path, folder)
-        files = os.listdir(new_folder_path)
-        # 类内循环
-        j = 1
-        for file in files:
-            if j > 100:  # 每类text样本数最多100
-                break
-            with open(os.path.join(new_folder_path, file), 'r') as fp:
-                raw = fp.read()
+        if folder[0] is not '.':
+            new_folder_path = os.path.join(folder_path, folder)
+            files = os.listdir(new_folder_path)
+            # 类内循环
+            j = 1
+            for file in files:
+                if j > 100:  # 每类text样本数最多100
+                    break
+                with open(os.path.join(new_folder_path, file), 'r') as fp:
+                    raw = fp.read()
 
-            word_cut = jieba.cut(raw, cut_all=False)  # 精确模式，返回的结构是一个可迭代的genertor
-            word_list = list(word_cut)  # genertor转化为list，每个词unicode格式
+                word_cut = jieba.cut(raw, cut_all=False)  # 精确模式，返回的结构是一个可迭代的genertor
+                word_list = list(word_cut)  # genertor转化为list，每个词unicode格式
 
-            data_list.append(word_list)
-            class_list.append(folder.decode('utf-8'))
-            j += 1
+                data_list.append(word_list)
+                class_list.append(folder)
+                j += 1
 
     # 划分训练集和测试集
-    data_class_list = zip(data_list, class_list)
+    data_class_list = list(zip(data_list, class_list))
     random.shuffle(data_class_list)
-    index = int(len(data_class_list) * test_size) + 1
+    index = int(len(data_class_list) * test_size) + 1  # Length of test size
     train_list = data_class_list[index:]
     test_list = data_class_list[:index]
     train_data_list, train_class_list = zip(*train_list)
     test_data_list, test_class_list = zip(*test_list)
 
-    # 统计词频放入all_words_dict
+    # 统计词频放入all_words_dict, 仅统计训练集
     all_words_dict = {}
     for word_list in train_data_list:
         for word in word_list:
-            if all_words_dict.has_key(word):
+            if word in all_words_dict:  # wrong
                 all_words_dict[word] += 1
             else:
                 all_words_dict[word] = 1
 
-    # 根据键的值倒序排序
+    # 根据键的值倒序排序，词频从高到低
     all_words_tuple_list = sorted(all_words_dict.items(), key=lambda f: f[1], reverse=True)  # 内建函数sorted参数需为list
-    all_words_list = list(zip(*all_words_tuple_list)[0])
+    all_words_list = list(zip(*all_words_tuple_list))[0]
 
     return all_words_list, train_data_list, test_data_list, train_class_list, test_class_list
 
 
-def words_dict(all_words_list, deleteN, stopwords_set=set()):
+def words_dict(all_words_list, deleteN, stopwords_set=set(), max_feature_num=1000):
     """
     函数说明:文本特征选取
     Parameters:
@@ -99,8 +110,14 @@ def words_dict(all_words_list, deleteN, stopwords_set=set()):
     # 选取特征词
     feature_words = []
     n = 1
+
+    all_words_list = list(all_words_list)
+    for word in all_words_list.copy():
+        if not check_contain_chinese(word):
+            all_words_list.remove(word)
+
     for t in range(deleteN, len(all_words_list), 1):
-        if n > 1000:  # feature_words的维度1000
+        if n > max_feature_num:  # feature_words的维度1000
             break
         # 如果这个词不是数字，并且不是指定的结束语，并且单词长度大于1小于5，那么这个词就可以作为feature_word
         if not all_words_list[t].isdigit() and all_words_list[t] not in stopwords_set and 1 < len(
@@ -149,21 +166,59 @@ def TextClassifier(train_feature_list, test_feature_list, train_class_list, test
         请编写这部分代码
 
     """
+    classifier = MultinomialNB()
+    classifier.fit(train_feature_list, train_class_list)
+    test_accuracy = classifier.score(test_feature_list, test_class_list)
 
     return test_accuracy
 
 
-if __name__ == '__main__':
+def score(delete_n=0, test_size=0.2, max_feature_num=1000, tf_idf=False, sublinear_tf=False):
+    """
+    Run the test once, and return the test accuracy.
+    :param delete_n: number of deleted most frequent feature word
+    :param test_size: portion of test set size
+    :param max_feature_num: max number of feature word
+    :return: accuracy
+    """
     # 文本预处理
     folder_path = './Database/SogouC/Sample'
     all_words_list, train_data_list, test_data_list, train_class_list, test_class_list = TextProcessing(folder_path,
-                                                                                                        test_size=0.2)
+                                                                                                        test_size=
+                                                                                                        test_size)
 
     # 生成stopwords_set
     stopwords_file = './stopwords_cn.txt'
     stopwords_set = MakeWordsSet(stopwords_file)
 
     # 文本特征提取和分类
-    deleteN = 450
-    feature_words = words_dict(all_words_list, deleteN, stopwords_set)
+    feature_words = words_dict(all_words_list, delete_n, stopwords_set, max_feature_num=max_feature_num)
     train_feature_list, test_feature_list = TextFeatures(train_data_list, test_data_list, feature_words)
+
+    # Transform the feature list
+    if tf_idf is True:
+        transformer = TfidfTransformer(sublinear_tf=sublinear_tf)
+        data = transformer.fit_transform(train_feature_list + test_feature_list)
+        train_feature_list, test_feature_list = data[:len(train_feature_list)], data[len(train_feature_list):]
+
+    test_accuracy = TextClassifier(train_feature_list, test_feature_list, train_class_list, test_class_list)
+    return test_accuracy
+
+
+def trans():
+    delete_range = list(range(80, 151, 10))
+    feature_range = list(range(800, 1301, 100))
+    df = pd.DataFrame([], index=delete_range, columns=feature_range)
+
+    for delete_n in delete_range:
+        for feature_n in feature_range:
+            df.loc[delete_n, feature_n] = score(delete_n=delete_n, max_feature_num=feature_n,
+                                                tf_idf=False, sublinear_tf=True)
+
+    print(df)
+    return df
+
+
+if __name__ == '__main__':
+    df = trans()
+    pass
