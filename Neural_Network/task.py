@@ -4,6 +4,9 @@ import numpy as np
 import tensorflow as tf
 import pickle as pk
 from sklearn.feature_extraction.text import TfidfVectorizer
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 keras = tf.keras
 
@@ -38,6 +41,7 @@ def task2(max_features=10000, depth=30):
     train_features = train_features[:20, ]
 
     model = keras.Sequential()
+    # must declare input_shape
     model.add(tf.layers.Dense(max_features, activation='relu', kernel_regularizer='l2', input_shape=(max_features,)))
 
     for width in np.linspace(max_features, 20, depth).astype(np.int):
@@ -46,9 +50,9 @@ def task2(max_features=10000, depth=30):
     model.add(tf.layers.Dense(20, activation='softmax', kernel_regularizer='l2'))
 
     model.compile(optimizer='adam', loss=tf.losses.log_loss, metrics=['accuracy', tf.losses.log_loss])
-    model.fit(train_features, train_labels, batch_size=32, epochs=200, validation_split=0.2)
+    model.fit(train_features, train_labels, batch_size=32, epochs=100, validation_split=0.2)
     pass
 
 
 if __name__ == '__main__':
-    task2(20, 30)
+    task2()
