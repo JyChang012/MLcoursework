@@ -101,6 +101,7 @@ def task2_lstm(vo_size=5000, maxlen=500):
     train_seq = np.array(tokenizer.texts_to_sequences(train_text))
     test_seq = tokenizer.texts_to_sequences(test_text)
 
+    # pad the seq
     train_seq = np.array(keras.preprocessing.sequence.pad_sequences(train_seq, maxlen=maxlen, value=0, padding='post',
                                                                     truncating='post'))
 
