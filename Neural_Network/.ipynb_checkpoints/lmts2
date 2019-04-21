@@ -1,0 +1,210 @@
+ssh://changjy@115.156.197.252:43722/opt/anaconda/anaconda3/bin/python -u /home/changjy/pycharm_mapping/pycharm_project_148/Neural_Network/task.py
+Console output is saving to: /Users/jiayuchang/PycharmProjects/MLcoursework/Neural_Network
+vo_size=10000
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_1 (Embedding)      (None, None, 32)          320000    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, None, 32)          0         
+_________________________________________________________________
+conv1d_1 (Conv1D)            (None, None, 64)          10304     
+_________________________________________________________________
+max_pooling1d_1 (MaxPooling1 (None, None, 64)          0         
+_________________________________________________________________
+bidirectional_1 (Bidirection (None, 128)               66048     
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dense_2 (Dense)              (None, 20)                1300      
+=================================================================
+Total params: 405,908
+Trainable params: 405,908
+Non-trainable params: 0
+_________________________________________________________________
+None
+2019-04-21 15:47:55.615137: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-21 15:47:55.628711: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-21 15:47:55.628954: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: deepLearning
+2019-04-21 15:47:55.629149: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: deepLearning
+2019-04-21 15:47:55.629438: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 396.37.0
+2019-04-21 15:47:55.629661: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 396.37.0
+2019-04-21 15:47:55.629905: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 396.37.0
+Train on 9051 samples, validate on 2263 samples
+Epoch 1/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 2.9798 - acc: 0.0582 - val_loss: 2.9685 - val_acc: 0.0685
+
+Epoch 00001: saving model to ./lstm3.ckpt
+Epoch 2/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.9450 - acc: 0.0745 - val_loss: 2.9285 - val_acc: 0.0853
+
+Epoch 00002: saving model to ./lstm3.ckpt
+Epoch 3/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.6842 - acc: 0.1256 - val_loss: 2.4093 - val_acc: 0.1719
+
+Epoch 00003: saving model to ./lstm3.ckpt
+Epoch 4/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.2647 - acc: 0.2163 - val_loss: 2.1821 - val_acc: 0.2532
+
+Epoch 00004: saving model to ./lstm3.ckpt
+Epoch 5/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 1.9300 - acc: 0.3142 - val_loss: 1.7302 - val_acc: 0.3893
+
+Epoch 00005: saving model to ./lstm3.ckpt
+Epoch 6/100
+9051/9051 [==============================] - 88s 10ms/step - loss: 1.6734 - acc: 0.3975 - val_loss: 1.5540 - val_acc: 0.4459
+
+Epoch 00006: saving model to ./lstm3.ckpt
+Epoch 7/100
+9051/9051 [==============================] - 95s 10ms/step - loss: 1.4761 - acc: 0.4655 - val_loss: 1.6124 - val_acc: 0.4308
+
+Epoch 00007: saving model to ./lstm3.ckpt
+Epoch 8/100
+9051/9051 [==============================] - 97s 11ms/step - loss: 1.3366 - acc: 0.5136 - val_loss: 1.4871 - val_acc: 0.4843
+
+Epoch 00008: saving model to ./lstm3.ckpt
+Epoch 9/100
+9051/9051 [==============================] - 97s 11ms/step - loss: 1.2443 - acc: 0.5555 - val_loss: 1.3520 - val_acc: 0.5546
+
+Epoch 00009: saving model to ./lstm3.ckpt
+Epoch 10/100
+9051/9051 [==============================] - 96s 11ms/step - loss: 1.1068 - acc: 0.6114 - val_loss: 1.2609 - val_acc: 0.5877
+
+Epoch 00010: saving model to ./lstm3.ckpt
+Epoch 11/100
+9051/9051 [==============================] - 88s 10ms/step - loss: 0.9857 - acc: 0.6553 - val_loss: 1.1464 - val_acc: 0.6306
+
+Epoch 00011: saving model to ./lstm3.ckpt
+Epoch 12/100
+9051/9051 [==============================] - 91s 10ms/step - loss: 0.8821 - acc: 0.6961 - val_loss: 1.0810 - val_acc: 0.6558
+
+Epoch 00012: saving model to ./lstm3.ckpt
+Epoch 13/100
+9051/9051 [==============================] - 91s 10ms/step - loss: 0.7753 - acc: 0.7388 - val_loss: 0.9817 - val_acc: 0.7022
+
+Epoch 00013: saving model to ./lstm3.ckpt
+Epoch 14/100
+9051/9051 [==============================] - 92s 10ms/step - loss: 0.6951 - acc: 0.7661 - val_loss: 0.9794 - val_acc: 0.6920
+
+Epoch 00014: saving model to ./lstm3.ckpt
+Epoch 15/100
+9051/9051 [==============================] - 92s 10ms/step - loss: 0.6358 - acc: 0.7885 - val_loss: 0.8757 - val_acc: 0.7384
+
+Epoch 00015: saving model to ./lstm3.ckpt
+Epoch 16/100
+9051/9051 [==============================] - 92s 10ms/step - loss: 0.5620 - acc: 0.8123 - val_loss: 0.8541 - val_acc: 0.7459
+
+Epoch 00016: saving model to ./lstm3.ckpt
+Epoch 17/100
+9051/9051 [==============================] - 94s 10ms/step - loss: 0.4922 - acc: 0.8390 - val_loss: 0.9680 - val_acc: 0.7229
+
+Epoch 00017: saving model to ./lstm3.ckpt
+Epoch 18/100
+9051/9051 [==============================] - 94s 10ms/step - loss: 0.4547 - acc: 0.8502 - val_loss: 0.7575 - val_acc: 0.7835
+
+Epoch 00018: saving model to ./lstm3.ckpt
+Epoch 19/100
+9051/9051 [==============================] - 93s 10ms/step - loss: 0.3999 - acc: 0.8718 - val_loss: 0.8375 - val_acc: 0.7698
+
+Epoch 00019: saving model to ./lstm3.ckpt
+Epoch 20/100
+9051/9051 [==============================] - 84s 9ms/step - loss: 0.3656 - acc: 0.8822 - val_loss: 0.7719 - val_acc: 0.7795
+
+Epoch 00020: saving model to ./lstm3.ckpt
+Epoch 21/100
+9051/9051 [==============================] - 84s 9ms/step - loss: 0.3187 - acc: 0.8942 - val_loss: 0.8351 - val_acc: 0.7755
+
+Epoch 00021: saving model to ./lstm3.ckpt
+Epoch 22/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.3108 - acc: 0.9013 - val_loss: 0.8121 - val_acc: 0.7821
+
+Epoch 00022: saving model to ./lstm3.ckpt
+Epoch 23/100
+9051/9051 [==============================] - 81s 9ms/step - loss: 0.2872 - acc: 0.9052 - val_loss: 0.7145 - val_acc: 0.8104
+
+Epoch 00023: saving model to ./lstm3.ckpt
+Epoch 24/100
+9051/9051 [==============================] - 85s 9ms/step - loss: 0.2613 - acc: 0.9158 - val_loss: 0.7257 - val_acc: 0.8078
+
+Epoch 00024: saving model to ./lstm3.ckpt
+Epoch 25/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.2460 - acc: 0.9195 - val_loss: 0.7202 - val_acc: 0.8263
+
+Epoch 00025: saving model to ./lstm3.ckpt
+Epoch 26/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.2196 - acc: 0.9269 - val_loss: 0.6655 - val_acc: 0.8294
+
+Epoch 00026: saving model to ./lstm3.ckpt
+Epoch 27/100
+9051/9051 [==============================] - 85s 9ms/step - loss: 0.2051 - acc: 0.9333 - val_loss: 0.6466 - val_acc: 0.8356
+
+Epoch 00027: saving model to ./lstm3.ckpt
+Epoch 28/100
+9051/9051 [==============================] - 81s 9ms/step - loss: 0.1885 - acc: 0.9370 - val_loss: 0.6770 - val_acc: 0.8334
+
+Epoch 00028: saving model to ./lstm3.ckpt
+Epoch 29/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.1737 - acc: 0.9453 - val_loss: 0.8388 - val_acc: 0.8091
+
+Epoch 00029: saving model to ./lstm3.ckpt
+Epoch 30/100
+9051/9051 [==============================] - 85s 9ms/step - loss: 0.1739 - acc: 0.9410 - val_loss: 0.7495 - val_acc: 0.8263
+
+Epoch 00030: saving model to ./lstm3.ckpt
+Epoch 31/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1621 - acc: 0.9464 - val_loss: 0.8290 - val_acc: 0.8073
+
+Epoch 00031: saving model to ./lstm3.ckpt
+Epoch 32/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1550 - acc: 0.9501 - val_loss: 0.6901 - val_acc: 0.8378
+
+Epoch 00032: saving model to ./lstm3.ckpt
+Epoch 33/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1327 - acc: 0.9581 - val_loss: 0.6778 - val_acc: 0.8467
+
+Epoch 00033: saving model to ./lstm3.ckpt
+Epoch 34/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1182 - acc: 0.9609 - val_loss: 0.7295 - val_acc: 0.8400
+
+Epoch 00034: saving model to ./lstm3.ckpt
+Epoch 35/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1262 - acc: 0.9590 - val_loss: 0.6849 - val_acc: 0.8453
+
+Epoch 00035: saving model to ./lstm3.ckpt
+Epoch 36/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1121 - acc: 0.9617 - val_loss: 0.7374 - val_acc: 0.8383
+
+Epoch 00036: saving model to ./lstm3.ckpt
+Epoch 37/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1105 - acc: 0.9651 - val_loss: 0.7038 - val_acc: 0.8462
+
+Epoch 00037: saving model to ./lstm3.ckpt
+Traceback (most recent call last):
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 282, in __init__
+    fetch, allow_tensor=True, allow_operation=True))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3590, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3679, in _as_graph_element_locked
+    types_str))
+TypeError: Can not convert a History into a Tensor or Operation.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/Neural_Network/task.py", line 207, in <module>
+    task2_lstm()
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/Neural_Network/task.py", line 143, in task2_lstm
+    validation_split=0.2))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 900, in run
+    run_metadata_ptr)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 427, in __init__
+    self._fetch_mapper = _FetchMapper.for_fetch(fetches)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 253, in for_fetch
+    return _ElementFetchMapper(fetches, contraction_fn)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 286, in __init__
+    (fetch, type(fetch), str(e)))
+TypeError: Fetch argument <tensorflow.python.keras._impl.keras.callbacks.History object at 0x7f80efc62160> has invalid type <class 'tensorflow.python.keras._impl.keras.callbacks.History'>, must be a string or Tensor. (Can not convert a History into a Tensor or Operation.)
+
+Process finished with exit code 1
