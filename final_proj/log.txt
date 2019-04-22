@@ -1,0 +1,838 @@
+ssh://changjy@115.156.197.252:43722/opt/anaconda/anaconda3/bin/python -u /home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py
+Console output is saving to: /Users/jiayuchang/PycharmProjects/MLcoursework/final_proj
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_2 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_3 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_4 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_5 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_6 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_7 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_6 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_8 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_7 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_9 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_8 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_10 (Dense)             (None, 12)                156       
+_________________________________________________________________
+batch_normalization_9 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_11 (Dense)             (None, 12)                156       
+_________________________________________________________________
+batch_normalization_10 (Batc (None, 12)                48        
+_________________________________________________________________
+dense_12 (Dense)             (None, 12)                156       
+_________________________________________________________________
+batch_normalization_11 (Batc (None, 12)                48        
+_________________________________________________________________
+dense_13 (Dense)             (None, 12)                156       
+_________________________________________________________________
+batch_normalization_12 (Batc (None, 12)                48        
+_________________________________________________________________
+dense_14 (Dense)             (None, 2)                 26        
+=================================================================
+Total params: 2,630
+Trainable params: 2,342
+Non-trainable params: 288
+_________________________________________________________________
+None
+2019-04-21 21:09:19.664074: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-21 21:09:19.678001: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-21 21:09:19.678217: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: deepLearning
+2019-04-21 21:09:19.678309: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: deepLearning
+2019-04-21 21:09:19.678457: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 396.37.0
+2019-04-21 21:09:19.678582: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 396.37.0
+2019-04-21 21:09:19.678673: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 396.37.0
+Train on 3090 samples, validate on 773 samples
+Epoch 1/20000
+3090/3090 [==============================] - 5s 2ms/step - loss: 823.6197 - val_loss: 853.8889
+Epoch 2/20000
+3090/3090 [==============================] - 1s 289us/step - loss: 764.2049 - val_loss: 822.1169
+Epoch 3/20000
+3090/3090 [==============================] - 1s 320us/step - loss: 686.3494 - val_loss: 763.2549
+Epoch 4/20000
+3090/3090 [==============================] - 1s 306us/step - loss: 586.7695 - val_loss: 976.3095
+Epoch 5/20000
+3090/3090 [==============================] - 1s 327us/step - loss: 511.8912 - val_loss: 831.9969
+Epoch 6/20000
+3090/3090 [==============================] - 1s 327us/step - loss: 427.6137 - val_loss: 849.8473
+Epoch 7/20000
+3090/3090 [==============================] - 1s 307us/step - loss: 362.3145 - val_loss: 765.0752
+Epoch 8/20000
+3090/3090 [==============================] - 1s 356us/step - loss: 286.5523 - val_loss: 366.4293
+Epoch 9/20000
+3090/3090 [==============================] - 1s 356us/step - loss: 219.5102 - val_loss: 362.4085
+Epoch 10/20000
+3090/3090 [==============================] - 1s 321us/step - loss: 170.3732 - val_loss: 279.5943
+Epoch 11/20000
+3090/3090 [==============================] - 1s 311us/step - loss: 128.8265 - val_loss: 359.6336
+Epoch 12/20000
+3090/3090 [==============================] - 1s 349us/step - loss: 95.4714 - val_loss: 152.9117
+Epoch 13/20000
+3090/3090 [==============================] - 1s 326us/step - loss: 77.1649 - val_loss: 203.4927
+Epoch 14/20000
+3090/3090 [==============================] - 1s 395us/step - loss: 63.2161 - val_loss: 223.5403
+Epoch 15/20000
+3090/3090 [==============================] - 1s 347us/step - loss: 51.4529 - val_loss: 54.3670
+Epoch 16/20000
+3090/3090 [==============================] - 1s 366us/step - loss: 48.9488 - val_loss: 352.4756
+Epoch 17/20000
+3090/3090 [==============================] - 1s 328us/step - loss: 44.2790 - val_loss: 66.8154
+Epoch 18/20000
+3090/3090 [==============================] - 1s 348us/step - loss: 41.6571 - val_loss: 334.3439
+Epoch 19/20000
+3090/3090 [==============================] - 1s 342us/step - loss: 41.7772 - val_loss: 319.4922
+Epoch 20/20000
+3090/3090 [==============================] - 1s 360us/step - loss: 43.0040 - val_loss: 45.7583
+Epoch 21/20000
+3090/3090 [==============================] - 1s 335us/step - loss: 44.4458 - val_loss: 48.6134
+Epoch 22/20000
+3090/3090 [==============================] - 1s 321us/step - loss: 41.9261 - val_loss: 196.7437
+Epoch 23/20000
+3090/3090 [==============================] - 1s 399us/step - loss: 42.6969 - val_loss: 156.9089
+Epoch 24/20000
+3090/3090 [==============================] - 1s 346us/step - loss: 37.0841 - val_loss: 298.9818
+Epoch 25/20000
+3090/3090 [==============================] - 1s 396us/step - loss: 39.5872 - val_loss: 3988.6109
+Epoch 26/20000
+3090/3090 [==============================] - 1s 293us/step - loss: 42.4433 - val_loss: 321.9586
+Epoch 27/20000
+3090/3090 [==============================] - 1s 434us/step - loss: 38.1266 - val_loss: 363.4044
+Epoch 28/20000
+3090/3090 [==============================] - 1s 386us/step - loss: 39.4303 - val_loss: 40.0361
+Epoch 29/20000
+3090/3090 [==============================] - 1s 429us/step - loss: 39.8743 - val_loss: 488.0415
+Epoch 30/20000
+3090/3090 [==============================] - 1s 401us/step - loss: 38.2050 - val_loss: 44.4160
+Epoch 31/20000
+3090/3090 [==============================] - 1s 386us/step - loss: 37.3314 - val_loss: 301.1951
+Epoch 32/20000
+3090/3090 [==============================] - 1s 340us/step - loss: 37.8199 - val_loss: 409.1258
+Epoch 33/20000
+3090/3090 [==============================] - 1s 364us/step - loss: 40.0747 - val_loss: 300.8336
+Epoch 34/20000
+3090/3090 [==============================] - 1s 333us/step - loss: 38.2606 - val_loss: 302.0159
+Epoch 35/20000
+3090/3090 [==============================] - 1s 342us/step - loss: 39.5504 - val_loss: 319.9590
+Epoch 36/20000
+3090/3090 [==============================] - 1s 372us/step - loss: 37.1198 - val_loss: 109.4110
+Epoch 37/20000
+3090/3090 [==============================] - 1s 366us/step - loss: 35.4251 - val_loss: 203.8450
+Epoch 38/20000
+3090/3090 [==============================] - 1s 332us/step - loss: 36.5708 - val_loss: 300.2084
+Epoch 39/20000
+3090/3090 [==============================] - 1s 265us/step - loss: 32.8639 - val_loss: 26.3524
+Epoch 40/20000
+3090/3090 [==============================] - 1s 345us/step - loss: 38.1559 - val_loss: 84.3931
+Epoch 41/20000
+3090/3090 [==============================] - 1s 336us/step - loss: 34.4658 - val_loss: 309.6402
+Epoch 42/20000
+3090/3090 [==============================] - 1s 306us/step - loss: 38.4381 - val_loss: 53.5203
+Epoch 43/20000
+3090/3090 [==============================] - 1s 336us/step - loss: 34.0140 - val_loss: 271.0071
+Epoch 44/20000
+3090/3090 [==============================] - 1s 295us/step - loss: 33.0913 - val_loss: 142.7085
+Epoch 45/20000
+3090/3090 [==============================] - 1s 322us/step - loss: 33.6593 - val_loss: 350.0633
+Epoch 46/20000
+3090/3090 [==============================] - 1s 326us/step - loss: 32.3580 - val_loss: 303.4346
+Epoch 47/20000
+3090/3090 [==============================] - 1s 300us/step - loss: 34.9673 - val_loss: 177.6999
+Epoch 48/20000
+3090/3090 [==============================] - 1s 294us/step - loss: 33.1359 - val_loss: 29.3720
+Epoch 49/20000
+3090/3090 [==============================] - 1s 276us/step - loss: 35.3300 - val_loss: 286.2846
+Epoch 50/20000
+3090/3090 [==============================] - 1s 290us/step - loss: 34.6997 - val_loss: 142.2926
+Epoch 51/20000
+3090/3090 [==============================] - 1s 311us/step - loss: 35.2747 - val_loss: 231.0189
+Epoch 52/20000
+3090/3090 [==============================] - 1s 307us/step - loss: 32.8378 - val_loss: 52.4437
+Epoch 53/20000
+3090/3090 [==============================] - 1s 260us/step - loss: 32.1130 - val_loss: 68.6798
+Epoch 54/20000
+3090/3090 [==============================] - 1s 310us/step - loss: 32.7237 - val_loss: 327.6348
+Epoch 55/20000
+3090/3090 [==============================] - 1s 317us/step - loss: 34.5019 - val_loss: 54.7447
+Epoch 56/20000
+3090/3090 [==============================] - 1s 387us/step - loss: 31.7518 - val_loss: 131.2496
+Epoch 57/20000
+3090/3090 [==============================] - 1s 313us/step - loss: 33.3237 - val_loss: 294.0741
+Epoch 58/20000
+3090/3090 [==============================] - 1s 347us/step - loss: 29.5435 - val_loss: 305.8453
+Epoch 59/20000
+3090/3090 [==============================] - 1s 275us/step - loss: 31.3889 - val_loss: 307.5413
+Traceback (most recent call last):
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 282, in __init__
+    fetch, allow_tensor=True, allow_operation=True))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3590, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3679, in _as_graph_element_locked
+    types_str))
+TypeError: Can not convert a History into a Tensor or Operation.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py", line 52, in <module>
+    main()
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py", line 47, in main
+    validation_split=0.2, callbacks=callbacks))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 900, in run
+    run_metadata_ptr)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 427, in __init__
+    self._fetch_mapper = _FetchMapper.for_fetch(fetches)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 253, in for_fetch
+    return _ElementFetchMapper(fetches, contraction_fn)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 286, in __init__
+    (fetch, type(fetch), str(e)))
+TypeError: Fetch argument <tensorflow.python.keras._impl.keras.callbacks.History object at 0x7fcc14ee7ba8> has invalid type <class 'tensorflow.python.keras._impl.keras.callbacks.History'>, must be a string or Tensor. (Can not convert a History into a Tensor or Operation.)
+
+Process finished with exit code 1
+
+
+
+
+
+new
+
+ssh://changjy@115.156.197.252:43722/opt/anaconda/anaconda3/bin/python -u /home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py
+Console output is saving to: /Users/jiayuchang/PycharmProjects/MLcoursework/final_proj
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_2 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_3 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_4 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_5 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_6 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_7 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_6 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_8 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_7 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_9 (Dense)              (None, 12)                156       
+_________________________________________________________________
+batch_normalization_8 (Batch (None, 12)                48        
+_________________________________________________________________
+dense_10 (Dense)             (None, 2)                 26        
+=================================================================
+Total params: 1,814
+Trainable params: 1,622
+Non-trainable params: 192
+_________________________________________________________________
+None
+2019-04-21 21:11:40.239866: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-21 21:11:40.251139: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-21 21:11:40.251174: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: deepLearning
+2019-04-21 21:11:40.251184: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: deepLearning
+2019-04-21 21:11:40.251230: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 396.37.0
+2019-04-21 21:11:40.251261: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 396.37.0
+2019-04-21 21:11:40.251272: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 396.37.0
+Train on 3090 samples, validate on 773 samples
+Epoch 1/20000
+3090/3090 [==============================] - 3s 957us/step - loss: 805.5325 - val_loss: 784.5865
+Epoch 2/20000
+3090/3090 [==============================] - 1s 246us/step - loss: 729.7256 - val_loss: 644.6239
+Epoch 3/20000
+3090/3090 [==============================] - 1s 251us/step - loss: 650.5067 - val_loss: 559.7546
+Epoch 4/20000
+3090/3090 [==============================] - 1s 271us/step - loss: 582.7638 - val_loss: 1090.9937
+Epoch 5/20000
+3090/3090 [==============================] - 1s 219us/step - loss: 503.9180 - val_loss: 640.6207
+Epoch 6/20000
+3090/3090 [==============================] - 1s 264us/step - loss: 425.4880 - val_loss: 533.9908
+Epoch 7/20000
+3090/3090 [==============================] - 1s 229us/step - loss: 347.2234 - val_loss: 1316.5004
+Epoch 8/20000
+3090/3090 [==============================] - 1s 240us/step - loss: 276.7556 - val_loss: 258.7129
+Epoch 9/20000
+3090/3090 [==============================] - 1s 230us/step - loss: 215.8411 - val_loss: 453.3881
+Epoch 10/20000
+3090/3090 [==============================] - 1s 210us/step - loss: 161.8428 - val_loss: 200.7629
+Epoch 11/20000
+3090/3090 [==============================] - 1s 203us/step - loss: 121.9746 - val_loss: 130.4434
+Epoch 12/20000
+3090/3090 [==============================] - 1s 235us/step - loss: 93.7896 - val_loss: 362.2626
+Epoch 13/20000
+3090/3090 [==============================] - 1s 209us/step - loss: 71.4311 - val_loss: 267.4766
+Epoch 14/20000
+3090/3090 [==============================] - 1s 243us/step - loss: 58.2839 - val_loss: 66.9178
+Epoch 15/20000
+3090/3090 [==============================] - 1s 281us/step - loss: 49.1750 - val_loss: 212.9665
+Epoch 16/20000
+3090/3090 [==============================] - 1s 220us/step - loss: 43.3130 - val_loss: 47.6440
+Epoch 17/20000
+3090/3090 [==============================] - 1s 227us/step - loss: 42.3858 - val_loss: 58.5242
+Epoch 18/20000
+3090/3090 [==============================] - 1s 263us/step - loss: 39.4486 - val_loss: 46.2317
+Epoch 19/20000
+3090/3090 [==============================] - 1s 212us/step - loss: 41.3386 - val_loss: 126.3159
+Epoch 20/20000
+3090/3090 [==============================] - 1s 208us/step - loss: 38.8517 - val_loss: 43.1280
+Epoch 21/20000
+3090/3090 [==============================] - 1s 232us/step - loss: 37.6222 - val_loss: 33.9033
+Epoch 22/20000
+3090/3090 [==============================] - 1s 200us/step - loss: 38.1362 - val_loss: 35.7710
+Epoch 23/20000
+3090/3090 [==============================] - 1s 234us/step - loss: 35.2849 - val_loss: 48.3587
+Epoch 24/20000
+3090/3090 [==============================] - 1s 212us/step - loss: 34.1722 - val_loss: 228.3857
+Epoch 25/20000
+3090/3090 [==============================] - 1s 181us/step - loss: 30.8052 - val_loss: 48.7330
+Epoch 26/20000
+3090/3090 [==============================] - 1s 244us/step - loss: 34.9135 - val_loss: 63.5768
+Epoch 27/20000
+3090/3090 [==============================] - 1s 207us/step - loss: 35.6902 - val_loss: 72.1944
+Epoch 28/20000
+3090/3090 [==============================] - 1s 226us/step - loss: 33.0996 - val_loss: 32.1893
+Epoch 29/20000
+3090/3090 [==============================] - 1s 213us/step - loss: 31.9389 - val_loss: 36.1418
+Epoch 30/20000
+3090/3090 [==============================] - 1s 220us/step - loss: 36.5232 - val_loss: 44.6825
+Epoch 31/20000
+3090/3090 [==============================] - 1s 194us/step - loss: 33.4412 - val_loss: 114.3903
+Epoch 32/20000
+3090/3090 [==============================] - 1s 249us/step - loss: 34.6301 - val_loss: 107.9127
+Epoch 33/20000
+3090/3090 [==============================] - 1s 249us/step - loss: 33.6145 - val_loss: 67.1904
+Epoch 34/20000
+3090/3090 [==============================] - 1s 239us/step - loss: 34.4475 - val_loss: 101.0629
+Epoch 35/20000
+3090/3090 [==============================] - 1s 247us/step - loss: 31.8020 - val_loss: 142.7187
+Epoch 36/20000
+3090/3090 [==============================] - 1s 238us/step - loss: 33.5077 - val_loss: 212.7797
+Epoch 37/20000
+3090/3090 [==============================] - 1s 218us/step - loss: 32.3051 - val_loss: 96.2737
+Epoch 38/20000
+3090/3090 [==============================] - 1s 257us/step - loss: 35.2618 - val_loss: 34.7526
+Epoch 39/20000
+3090/3090 [==============================] - 1s 211us/step - loss: 32.5211 - val_loss: 27.0619
+Epoch 40/20000
+3090/3090 [==============================] - 1s 221us/step - loss: 30.3378 - val_loss: 152.1256
+Epoch 41/20000
+3090/3090 [==============================] - 1s 225us/step - loss: 29.9350 - val_loss: 120.3971
+Epoch 42/20000
+3090/3090 [==============================] - 1s 294us/step - loss: 30.4642 - val_loss: 38.1000
+Epoch 43/20000
+3090/3090 [==============================] - 1s 215us/step - loss: 32.3330 - val_loss: 223.4669
+Epoch 44/20000
+3090/3090 [==============================] - 1s 246us/step - loss: 31.2263 - val_loss: 31.4390
+Epoch 45/20000
+3090/3090 [==============================] - 1s 254us/step - loss: 35.0948 - val_loss: 274.0408
+Epoch 46/20000
+3090/3090 [==============================] - 1s 243us/step - loss: 31.4145 - val_loss: 28.5277
+Epoch 47/20000
+3090/3090 [==============================] - 1s 235us/step - loss: 29.3283 - val_loss: 68.7632
+Epoch 48/20000
+3090/3090 [==============================] - 1s 248us/step - loss: 30.0979 - val_loss: 39.4009
+Epoch 49/20000
+3090/3090 [==============================] - 1s 253us/step - loss: 28.6798 - val_loss: 26.9005
+Epoch 50/20000
+3090/3090 [==============================] - 1s 204us/step - loss: 30.9039 - val_loss: 37.5946
+Epoch 51/20000
+3090/3090 [==============================] - 1s 247us/step - loss: 29.5243 - val_loss: 34.6304
+Epoch 52/20000
+3090/3090 [==============================] - 1s 219us/step - loss: 28.0924 - val_loss: 26.8549
+Epoch 53/20000
+3090/3090 [==============================] - 1s 218us/step - loss: 31.3326 - val_loss: 25.3272
+Epoch 54/20000
+3090/3090 [==============================] - 1s 218us/step - loss: 27.9938 - val_loss: 21.3165
+Epoch 55/20000
+3090/3090 [==============================] - 1s 197us/step - loss: 30.3629 - val_loss: 41.2265
+Epoch 56/20000
+3090/3090 [==============================] - 1s 220us/step - loss: 27.2906 - val_loss: 280.2145
+Epoch 57/20000
+3090/3090 [==============================] - 1s 229us/step - loss: 26.5177 - val_loss: 77.9214
+Epoch 58/20000
+3090/3090 [==============================] - 1s 254us/step - loss: 28.2108 - val_loss: 95.1175
+Epoch 59/20000
+3090/3090 [==============================] - 1s 213us/step - loss: 30.3034 - val_loss: 203.6466
+Epoch 60/20000
+3090/3090 [==============================] - 1s 206us/step - loss: 33.0885 - val_loss: 44.0083
+Epoch 61/20000
+3090/3090 [==============================] - 1s 241us/step - loss: 28.9101 - val_loss: 43.7889
+Epoch 62/20000
+3090/3090 [==============================] - 1s 263us/step - loss: 28.7205 - val_loss: 101.0129
+Epoch 63/20000
+3090/3090 [==============================] - 1s 218us/step - loss: 26.7719 - val_loss: 20.3324
+Epoch 64/20000
+3090/3090 [==============================] - 1s 254us/step - loss: 29.2887 - val_loss: 261.1384
+Epoch 65/20000
+3090/3090 [==============================] - 1s 219us/step - loss: 25.4449 - val_loss: 25.7200
+Epoch 66/20000
+3090/3090 [==============================] - 1s 205us/step - loss: 27.8944 - val_loss: 24.6258
+Epoch 67/20000
+3090/3090 [==============================] - 1s 203us/step - loss: 28.3280 - val_loss: 46.1534
+Epoch 68/20000
+3090/3090 [==============================] - 1s 218us/step - loss: 28.6686 - val_loss: 39.0314
+Epoch 69/20000
+3090/3090 [==============================] - 1s 184us/step - loss: 26.1968 - val_loss: 112.2184
+Epoch 70/20000
+3090/3090 [==============================] - 1s 206us/step - loss: 29.3312 - val_loss: 46.9821
+Epoch 71/20000
+3090/3090 [==============================] - 1s 201us/step - loss: 29.6237 - val_loss: 30.9946
+Epoch 72/20000
+3090/3090 [==============================] - 1s 248us/step - loss: 26.8939 - val_loss: 147.5843
+Epoch 73/20000
+3090/3090 [==============================] - 1s 225us/step - loss: 27.7127 - val_loss: 26.3026
+Epoch 74/20000
+3090/3090 [==============================] - 1s 239us/step - loss: 29.3505 - val_loss: 34.6371
+Epoch 75/20000
+3090/3090 [==============================] - 1s 189us/step - loss: 31.0517 - val_loss: 31.4925
+Epoch 76/20000
+3090/3090 [==============================] - 1s 225us/step - loss: 32.6699 - val_loss: 315.6477
+Epoch 77/20000
+3090/3090 [==============================] - 1s 218us/step - loss: 29.5008 - val_loss: 28.1847
+Epoch 78/20000
+3090/3090 [==============================] - 1s 235us/step - loss: 26.5678 - val_loss: 33.3018
+Epoch 79/20000
+3090/3090 [==============================] - 1s 246us/step - loss: 26.0160 - val_loss: 31.1358
+Epoch 80/20000
+3090/3090 [==============================] - 1s 247us/step - loss: 28.1830 - val_loss: 39.0214
+Epoch 81/20000
+3090/3090 [==============================] - 1s 226us/step - loss: 26.9146 - val_loss: 182.6572
+Epoch 82/20000
+3090/3090 [==============================] - 1s 249us/step - loss: 30.2064 - val_loss: 194.2102
+Epoch 83/20000
+3090/3090 [==============================] - 1s 215us/step - loss: 27.7010 - val_loss: 28.8661
+Traceback (most recent call last):
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 282, in __init__
+    fetch, allow_tensor=True, allow_operation=True))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3590, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3679, in _as_graph_element_locked
+    types_str))
+TypeError: Can not convert a History into a Tensor or Operation.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py", line 52, in <module>
+    main()
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py", line 47, in main
+    validation_split=0.2, callbacks=callbacks))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 900, in run
+    run_metadata_ptr)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 427, in __init__
+    self._fetch_mapper = _FetchMapper.for_fetch(fetches)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 253, in for_fetch
+    return _ElementFetchMapper(fetches, contraction_fn)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 286, in __init__
+    (fetch, type(fetch), str(e)))
+TypeError: Fetch argument <tensorflow.python.keras._impl.keras.callbacks.History object at 0x7f80829f9438> has invalid type <class 'tensorflow.python.keras._impl.keras.callbacks.History'>, must be a string or Tensor. (Can not convert a History into a Tensor or Operation.)
+
+Process finished with exit code 1
+
+
+
+new
+
+ssh://changjy@115.156.197.252:43722/opt/anaconda/anaconda3/bin/python -u /home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py
+Console output is saving to: /Users/jiayuchang/PycharmProjects/MLcoursework/final_proj
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_2 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_3 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_4 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_5 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_6 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_7 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_8 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_9 (Dense)              (None, 12)                156       
+_________________________________________________________________
+dense_10 (Dense)             (None, 2)                 26        
+=================================================================
+Total params: 1,430
+Trainable params: 1,430
+Non-trainable params: 0
+_________________________________________________________________
+None
+2019-04-21 21:13:55.373476: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-21 21:13:55.413996: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-21 21:13:55.414077: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: deepLearning
+2019-04-21 21:13:55.414104: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: deepLearning
+2019-04-21 21:13:55.414202: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 396.37.0
+2019-04-21 21:13:55.414268: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 396.37.0
+2019-04-21 21:13:55.414296: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 396.37.0
+Train on 3090 samples, validate on 773 samples
+Epoch 1/20000
+3090/3090 [==============================] - 1s 443us/step - loss: 661.8001 - val_loss: 250.8909
+Epoch 2/20000
+3090/3090 [==============================] - 0s 92us/step - loss: 202.6423 - val_loss: 190.3690
+Epoch 3/20000
+3090/3090 [==============================] - 0s 89us/step - loss: 162.4686 - val_loss: 150.5047
+Epoch 4/20000
+3090/3090 [==============================] - 0s 97us/step - loss: 136.7686 - val_loss: 142.2377
+Epoch 5/20000
+3090/3090 [==============================] - 0s 67us/step - loss: 127.6126 - val_loss: 120.3252
+Epoch 6/20000
+3090/3090 [==============================] - 0s 85us/step - loss: 107.8067 - val_loss: 121.1480
+Epoch 7/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 96.8824 - val_loss: 84.9619
+Epoch 8/20000
+3090/3090 [==============================] - 0s 113us/step - loss: 78.4970 - val_loss: 70.3892
+Epoch 9/20000
+3090/3090 [==============================] - 0s 98us/step - loss: 75.1924 - val_loss: 66.9195
+Epoch 10/20000
+3090/3090 [==============================] - 0s 77us/step - loss: 65.4719 - val_loss: 66.2329
+Epoch 11/20000
+3090/3090 [==============================] - 0s 101us/step - loss: 62.5405 - val_loss: 61.9391
+Epoch 12/20000
+3090/3090 [==============================] - 0s 110us/step - loss: 58.7775 - val_loss: 59.8553
+Epoch 13/20000
+3090/3090 [==============================] - 0s 96us/step - loss: 54.8527 - val_loss: 55.0621
+Epoch 14/20000
+3090/3090 [==============================] - 0s 77us/step - loss: 54.0089 - val_loss: 49.4864
+Epoch 15/20000
+3090/3090 [==============================] - 0s 103us/step - loss: 50.6276 - val_loss: 47.9933
+Epoch 16/20000
+3090/3090 [==============================] - 0s 90us/step - loss: 47.6336 - val_loss: 45.8827
+Epoch 17/20000
+3090/3090 [==============================] - 0s 94us/step - loss: 45.0332 - val_loss: 48.4189
+Epoch 18/20000
+3090/3090 [==============================] - 0s 103us/step - loss: 43.4374 - val_loss: 46.1495
+Epoch 19/20000
+3090/3090 [==============================] - 0s 78us/step - loss: 42.2593 - val_loss: 44.8988
+Epoch 20/20000
+3090/3090 [==============================] - 0s 97us/step - loss: 44.4125 - val_loss: 39.9430
+Epoch 21/20000
+3090/3090 [==============================] - 0s 110us/step - loss: 41.8233 - val_loss: 38.2972
+Epoch 22/20000
+3090/3090 [==============================] - 0s 123us/step - loss: 45.9137 - val_loss: 48.0893
+Epoch 23/20000
+3090/3090 [==============================] - 0s 100us/step - loss: 39.7215 - val_loss: 41.8789
+Epoch 24/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 38.7253 - val_loss: 36.4982
+Epoch 25/20000
+3090/3090 [==============================] - 0s 112us/step - loss: 38.0476 - val_loss: 44.4046
+Epoch 26/20000
+3090/3090 [==============================] - 0s 91us/step - loss: 36.2667 - val_loss: 37.3108
+Epoch 27/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 36.3027 - val_loss: 33.4718
+Epoch 28/20000
+3090/3090 [==============================] - 0s 89us/step - loss: 34.2367 - val_loss: 36.1972
+Epoch 29/20000
+3090/3090 [==============================] - 0s 114us/step - loss: 32.0864 - val_loss: 36.0024
+Epoch 30/20000
+3090/3090 [==============================] - 0s 139us/step - loss: 32.5247 - val_loss: 30.6505
+Epoch 31/20000
+3090/3090 [==============================] - 0s 93us/step - loss: 32.9131 - val_loss: 43.3964
+Epoch 32/20000
+3090/3090 [==============================] - 0s 110us/step - loss: 33.6462 - val_loss: 30.0401
+Epoch 33/20000
+3090/3090 [==============================] - 0s 116us/step - loss: 32.0458 - val_loss: 32.3204
+Epoch 34/20000
+3090/3090 [==============================] - 0s 122us/step - loss: 35.1011 - val_loss: 36.5037
+Epoch 35/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 30.2023 - val_loss: 33.9749
+Epoch 36/20000
+3090/3090 [==============================] - 0s 90us/step - loss: 30.0081 - val_loss: 27.7812
+Epoch 37/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 29.1421 - val_loss: 58.8293
+Epoch 38/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 44.7287 - val_loss: 29.4028
+Epoch 39/20000
+3090/3090 [==============================] - 0s 118us/step - loss: 29.0320 - val_loss: 38.7469
+Epoch 40/20000
+3090/3090 [==============================] - 0s 71us/step - loss: 30.2152 - val_loss: 28.3943
+Epoch 41/20000
+3090/3090 [==============================] - 0s 110us/step - loss: 30.2446 - val_loss: 28.9887
+Epoch 42/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 27.9607 - val_loss: 32.3603
+Epoch 43/20000
+3090/3090 [==============================] - 0s 98us/step - loss: 29.7187 - val_loss: 30.5535
+Epoch 44/20000
+3090/3090 [==============================] - 0s 86us/step - loss: 30.9240 - val_loss: 28.0614
+Epoch 45/20000
+3090/3090 [==============================] - 0s 89us/step - loss: 33.1294 - val_loss: 27.7271
+Epoch 46/20000
+3090/3090 [==============================] - 0s 87us/step - loss: 29.8543 - val_loss: 29.3573
+Epoch 47/20000
+3090/3090 [==============================] - 0s 120us/step - loss: 26.0046 - val_loss: 25.7245
+Epoch 48/20000
+3090/3090 [==============================] - 0s 91us/step - loss: 25.4937 - val_loss: 27.4082
+Epoch 49/20000
+3090/3090 [==============================] - 0s 117us/step - loss: 28.3584 - val_loss: 27.5687
+Epoch 50/20000
+3090/3090 [==============================] - 0s 86us/step - loss: 26.4978 - val_loss: 25.6383
+Epoch 51/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 26.6688 - val_loss: 32.6062
+Epoch 52/20000
+3090/3090 [==============================] - 0s 124us/step - loss: 27.6216 - val_loss: 25.1978
+Epoch 53/20000
+3090/3090 [==============================] - 0s 94us/step - loss: 28.4694 - val_loss: 27.5316
+Epoch 54/20000
+3090/3090 [==============================] - 0s 109us/step - loss: 26.3723 - val_loss: 26.3635
+Epoch 55/20000
+3090/3090 [==============================] - 0s 96us/step - loss: 26.3820 - val_loss: 26.2906
+Epoch 56/20000
+3090/3090 [==============================] - 0s 109us/step - loss: 24.8351 - val_loss: 25.5711
+Epoch 57/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 25.1502 - val_loss: 24.3813
+Epoch 58/20000
+3090/3090 [==============================] - 0s 104us/step - loss: 24.2807 - val_loss: 37.1344
+Epoch 59/20000
+3090/3090 [==============================] - 0s 93us/step - loss: 26.1743 - val_loss: 25.7330
+Epoch 60/20000
+3090/3090 [==============================] - 0s 106us/step - loss: 24.3133 - val_loss: 25.8691
+Epoch 61/20000
+3090/3090 [==============================] - 0s 113us/step - loss: 28.2915 - val_loss: 28.0292
+Epoch 62/20000
+3090/3090 [==============================] - 0s 99us/step - loss: 24.8475 - val_loss: 29.4705
+Epoch 63/20000
+3090/3090 [==============================] - 0s 89us/step - loss: 30.1137 - val_loss: 26.7228
+Epoch 64/20000
+3090/3090 [==============================] - 0s 115us/step - loss: 26.1132 - val_loss: 23.4473
+Epoch 65/20000
+3090/3090 [==============================] - 0s 93us/step - loss: 27.3664 - val_loss: 26.9148
+Epoch 66/20000
+3090/3090 [==============================] - 0s 67us/step - loss: 26.9806 - val_loss: 32.6568
+Epoch 67/20000
+3090/3090 [==============================] - 0s 120us/step - loss: 26.2310 - val_loss: 29.0155
+Epoch 68/20000
+3090/3090 [==============================] - 0s 75us/step - loss: 27.0858 - val_loss: 31.8611
+Epoch 69/20000
+3090/3090 [==============================] - 0s 115us/step - loss: 32.6837 - val_loss: 34.8187
+Epoch 70/20000
+3090/3090 [==============================] - 0s 91us/step - loss: 27.5106 - val_loss: 23.1163
+Epoch 71/20000
+3090/3090 [==============================] - 0s 87us/step - loss: 24.2327 - val_loss: 23.3201
+Epoch 72/20000
+3090/3090 [==============================] - 0s 104us/step - loss: 24.0986 - val_loss: 48.5305
+Epoch 73/20000
+3090/3090 [==============================] - 0s 82us/step - loss: 32.4434 - val_loss: 33.9987
+Epoch 74/20000
+3090/3090 [==============================] - 0s 110us/step - loss: 29.8684 - val_loss: 33.7211
+Epoch 75/20000
+3090/3090 [==============================] - 0s 93us/step - loss: 30.1794 - val_loss: 24.3730
+Epoch 76/20000
+3090/3090 [==============================] - 0s 105us/step - loss: 24.2114 - val_loss: 24.9816
+Epoch 77/20000
+3090/3090 [==============================] - 0s 124us/step - loss: 23.0928 - val_loss: 22.9863
+Epoch 78/20000
+3090/3090 [==============================] - 0s 116us/step - loss: 25.4021 - val_loss: 25.8123
+Epoch 79/20000
+3090/3090 [==============================] - 0s 125us/step - loss: 27.8690 - val_loss: 22.3059
+Epoch 80/20000
+3090/3090 [==============================] - 0s 116us/step - loss: 22.2686 - val_loss: 29.7042
+Epoch 81/20000
+3090/3090 [==============================] - 0s 95us/step - loss: 25.4308 - val_loss: 23.5723
+Epoch 82/20000
+3090/3090 [==============================] - 0s 109us/step - loss: 30.7014 - val_loss: 24.7283
+Epoch 83/20000
+3090/3090 [==============================] - 0s 88us/step - loss: 22.3625 - val_loss: 21.7003
+Epoch 84/20000
+3090/3090 [==============================] - 0s 104us/step - loss: 24.2667 - val_loss: 29.2061
+Epoch 85/20000
+3090/3090 [==============================] - 0s 96us/step - loss: 26.6672 - val_loss: 22.9745
+Epoch 86/20000
+3090/3090 [==============================] - 0s 88us/step - loss: 21.8633 - val_loss: 27.2150
+Epoch 87/20000
+3090/3090 [==============================] - 0s 115us/step - loss: 23.2503 - val_loss: 21.3078
+Epoch 88/20000
+3090/3090 [==============================] - 0s 98us/step - loss: 22.8185 - val_loss: 31.1363
+Epoch 89/20000
+3090/3090 [==============================] - 0s 122us/step - loss: 26.1528 - val_loss: 24.7970
+Epoch 90/20000
+3090/3090 [==============================] - 0s 74us/step - loss: 28.9748 - val_loss: 24.0306
+Epoch 91/20000
+3090/3090 [==============================] - 0s 94us/step - loss: 21.9780 - val_loss: 22.4956
+Epoch 92/20000
+3090/3090 [==============================] - 0s 105us/step - loss: 23.3969 - val_loss: 22.0954
+Epoch 93/20000
+3090/3090 [==============================] - 0s 92us/step - loss: 21.8338 - val_loss: 27.8523
+Epoch 94/20000
+3090/3090 [==============================] - 0s 115us/step - loss: 22.9089 - val_loss: 21.7354
+Epoch 95/20000
+3090/3090 [==============================] - 0s 74us/step - loss: 23.7671 - val_loss: 22.1301
+Epoch 96/20000
+3090/3090 [==============================] - 0s 118us/step - loss: 25.0310 - val_loss: 24.0545
+Epoch 97/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 24.0490 - val_loss: 23.2901
+Epoch 98/20000
+3090/3090 [==============================] - 0s 99us/step - loss: 24.1832 - val_loss: 23.6836
+Epoch 99/20000
+3090/3090 [==============================] - 0s 114us/step - loss: 26.2194 - val_loss: 22.5390
+Epoch 100/20000
+3090/3090 [==============================] - 0s 114us/step - loss: 22.1353 - val_loss: 23.2399
+Epoch 101/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 23.7807 - val_loss: 38.3485
+Epoch 102/20000
+3090/3090 [==============================] - 0s 97us/step - loss: 25.4654 - val_loss: 34.1782
+Epoch 103/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 21.6762 - val_loss: 22.8185
+Epoch 104/20000
+3090/3090 [==============================] - 0s 102us/step - loss: 21.9001 - val_loss: 23.6936
+Epoch 105/20000
+3090/3090 [==============================] - 0s 118us/step - loss: 25.3707 - val_loss: 22.7961
+Epoch 106/20000
+3090/3090 [==============================] - 0s 101us/step - loss: 22.2131 - val_loss: 39.1410
+Epoch 107/20000
+3090/3090 [==============================] - 0s 105us/step - loss: 24.7673 - val_loss: 21.2527
+Epoch 108/20000
+3090/3090 [==============================] - 0s 104us/step - loss: 22.8352 - val_loss: 27.2413
+Epoch 109/20000
+3090/3090 [==============================] - 0s 112us/step - loss: 21.7287 - val_loss: 20.6279
+Epoch 110/20000
+3090/3090 [==============================] - 0s 85us/step - loss: 20.5202 - val_loss: 21.9465
+Epoch 111/20000
+3090/3090 [==============================] - 0s 113us/step - loss: 22.4452 - val_loss: 23.5207
+Epoch 112/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 23.4124 - val_loss: 23.6221
+Epoch 113/20000
+3090/3090 [==============================] - 0s 101us/step - loss: 20.6066 - val_loss: 23.3390
+Epoch 114/20000
+3090/3090 [==============================] - 0s 92us/step - loss: 22.5498 - val_loss: 26.2593
+Epoch 115/20000
+3090/3090 [==============================] - 0s 109us/step - loss: 22.9319 - val_loss: 39.0461
+Epoch 116/20000
+3090/3090 [==============================] - 0s 72us/step - loss: 22.8453 - val_loss: 29.5298
+Epoch 117/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 22.3379 - val_loss: 21.8856
+Epoch 118/20000
+3090/3090 [==============================] - 0s 101us/step - loss: 19.9261 - val_loss: 23.0236
+Epoch 119/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 24.5639 - val_loss: 22.5363
+Epoch 120/20000
+3090/3090 [==============================] - 0s 99us/step - loss: 23.3022 - val_loss: 19.6357
+Epoch 121/20000
+3090/3090 [==============================] - 0s 81us/step - loss: 20.2946 - val_loss: 19.7844
+Epoch 122/20000
+3090/3090 [==============================] - 0s 99us/step - loss: 19.3600 - val_loss: 20.1689
+Epoch 123/20000
+3090/3090 [==============================] - 0s 108us/step - loss: 26.0240 - val_loss: 22.1184
+Epoch 124/20000
+3090/3090 [==============================] - 0s 91us/step - loss: 22.3725 - val_loss: 27.1217
+Epoch 125/20000
+3090/3090 [==============================] - 0s 98us/step - loss: 21.8374 - val_loss: 19.6329
+Epoch 126/20000
+3090/3090 [==============================] - 0s 82us/step - loss: 21.3099 - val_loss: 22.3429
+Epoch 127/20000
+3090/3090 [==============================] - 0s 112us/step - loss: 31.6422 - val_loss: 82.7266
+Epoch 128/20000
+3090/3090 [==============================] - 0s 102us/step - loss: 58.7669 - val_loss: 47.5512
+Epoch 129/20000
+3090/3090 [==============================] - 0s 104us/step - loss: 40.0415 - val_loss: 41.6904
+Epoch 130/20000
+3090/3090 [==============================] - 0s 76us/step - loss: 36.5318 - val_loss: 29.7590
+Epoch 131/20000
+3090/3090 [==============================] - 0s 102us/step - loss: 27.7779 - val_loss: 24.0524
+Epoch 132/20000
+3090/3090 [==============================] - 0s 107us/step - loss: 24.2801 - val_loss: 24.3990
+Epoch 133/20000
+3090/3090 [==============================] - 0s 101us/step - loss: 24.6182 - val_loss: 21.8973
+Epoch 134/20000
+3090/3090 [==============================] - 0s 98us/step - loss: 27.9924 - val_loss: 24.1469
+Epoch 135/20000
+3090/3090 [==============================] - 0s 81us/step - loss: 22.8001 - val_loss: 26.6970
+Epoch 136/20000
+3090/3090 [==============================] - 0s 101us/step - loss: 21.3585 - val_loss: 21.9510
+Epoch 137/20000
+3090/3090 [==============================] - 0s 128us/step - loss: 20.9769 - val_loss: 23.5206
+Epoch 138/20000
+3090/3090 [==============================] - 0s 112us/step - loss: 20.7351 - val_loss: 23.0386
+Epoch 139/20000
+3090/3090 [==============================] - 0s 92us/step - loss: 23.8104 - val_loss: 23.3782
+Epoch 140/20000
+3090/3090 [==============================] - 0s 106us/step - loss: 22.1981 - val_loss: 21.3999
+Epoch 141/20000
+3090/3090 [==============================] - 0s 111us/step - loss: 20.1137 - val_loss: 23.4556
+Epoch 142/20000
+3090/3090 [==============================] - 0s 102us/step - loss: 20.2348 - val_loss: 20.0288
+Epoch 143/20000
+3090/3090 [==============================] - 0s 110us/step - loss: 34.1636 - val_loss: 20.9623
+Epoch 144/20000
+3090/3090 [==============================] - 0s 120us/step - loss: 19.4496 - val_loss: 26.0627
+Epoch 145/20000
+3090/3090 [==============================] - 0s 88us/step - loss: 25.9374 - val_loss: 26.2897
+Traceback (most recent call last):
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 282, in __init__
+    fetch, allow_tensor=True, allow_operation=True))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3590, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3679, in _as_graph_element_locked
+    types_str))
+TypeError: Can not convert a History into a Tensor or Operation.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py", line 51, in <module>
+    main()
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/final_proj/task.py", line 46, in main
+    validation_split=0.2, callbacks=callbacks))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 900, in run
+    run_metadata_ptr)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 427, in __init__
+    self._fetch_mapper = _FetchMapper.for_fetch(fetches)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 253, in for_fetch
+    return _ElementFetchMapper(fetches, contraction_fn)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 286, in __init__
+    (fetch, type(fetch), str(e)))
+TypeError: Fetch argument <tensorflow.python.keras._impl.keras.callbacks.History object at 0x7f1d37fe7198> has invalid type <class 'tensorflow.python.keras._impl.keras.callbacks.History'>, must be a string or Tensor. (Can not convert a History into a Tensor or Operation.)
+
+Process finished with exit code 1
+
+
+optimal 25

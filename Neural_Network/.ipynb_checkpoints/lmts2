@@ -208,3 +208,159 @@ Traceback (most recent call last):
 TypeError: Fetch argument <tensorflow.python.keras._impl.keras.callbacks.History object at 0x7f80efc62160> has invalid type <class 'tensorflow.python.keras._impl.keras.callbacks.History'>, must be a string or Tensor. (Can not convert a History into a Tensor or Operation.)
 
 Process finished with exit code 1
+
+
+
+
+new
+ssh://changjy@115.156.197.252:43722/opt/anaconda/anaconda3/bin/python -u /home/changjy/pycharm_mapping/pycharm_project_148/Neural_Network/task.py
+Console output is saving to: /Users/jiayuchang/PycharmProjects/MLcoursework/Neural_Network
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding_1 (Embedding)      (None, None, 32)          320000    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, None, 32)          0         
+_________________________________________________________________
+conv1d_1 (Conv1D)            (None, None, 64)          10304     
+_________________________________________________________________
+max_pooling1d_1 (MaxPooling1 (None, None, 64)          0         
+_________________________________________________________________
+bidirectional_1 (Bidirection (None, 128)               66048     
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dense_2 (Dense)              (None, 20)                1300      
+=================================================================
+Total params: 405,908
+Trainable params: 405,908
+Non-trainable params: 0
+_________________________________________________________________
+None
+2019-04-21 17:30:42.054841: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-21 17:30:42.064975: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-21 17:30:42.065077: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: deepLearning
+2019-04-21 17:30:42.065147: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: deepLearning
+2019-04-21 17:30:42.065323: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 396.37.0
+2019-04-21 17:30:42.065484: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 396.37.0
+2019-04-21 17:30:42.065561: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 396.37.0
+Train on 9051 samples, validate on 2263 samples
+Epoch 1/100
+9051/9051 [==============================] - 86s 10ms/step - loss: 2.9775 - acc: 0.0612 - val_loss: 2.9625 - val_acc: 0.0623
+Epoch 2/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.9660 - acc: 0.0637 - val_loss: 2.9725 - val_acc: 0.0663
+Epoch 3/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.9441 - acc: 0.0662 - val_loss: 2.8149 - val_acc: 0.0871
+Epoch 4/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.5520 - acc: 0.1271 - val_loss: 2.3218 - val_acc: 0.1909
+Epoch 5/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 2.2592 - acc: 0.1992 - val_loss: 2.1508 - val_acc: 0.2528
+Epoch 6/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 2.0862 - acc: 0.2536 - val_loss: 1.9475 - val_acc: 0.3288
+Epoch 7/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 1.8819 - acc: 0.3278 - val_loss: 1.8242 - val_acc: 0.3809
+Epoch 8/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 1.7284 - acc: 0.3825 - val_loss: 1.6840 - val_acc: 0.4110
+Epoch 9/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 1.5645 - acc: 0.4416 - val_loss: 1.6238 - val_acc: 0.4476
+Epoch 10/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 1.4172 - acc: 0.4932 - val_loss: 1.4935 - val_acc: 0.4878
+Epoch 11/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 1.3202 - acc: 0.5312 - val_loss: 1.4228 - val_acc: 0.5157
+Epoch 12/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 1.1910 - acc: 0.5792 - val_loss: 1.3961 - val_acc: 0.5431
+Epoch 13/100
+9051/9051 [==============================] - 81s 9ms/step - loss: 1.0638 - acc: 0.6195 - val_loss: 1.3477 - val_acc: 0.5700
+Epoch 14/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.9717 - acc: 0.6539 - val_loss: 1.1382 - val_acc: 0.6297
+Epoch 15/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.8848 - acc: 0.6916 - val_loss: 1.0859 - val_acc: 0.6580
+Epoch 16/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.7994 - acc: 0.7236 - val_loss: 1.1482 - val_acc: 0.6483
+Epoch 17/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.7147 - acc: 0.7564 - val_loss: 1.1103 - val_acc: 0.6624
+Epoch 18/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.6266 - acc: 0.7871 - val_loss: 1.0698 - val_acc: 0.6823
+Epoch 19/100
+9051/9051 [==============================] - 81s 9ms/step - loss: 0.5707 - acc: 0.8091 - val_loss: 0.9903 - val_acc: 0.7132
+Epoch 20/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.5282 - acc: 0.8250 - val_loss: 0.9362 - val_acc: 0.7375
+Epoch 21/100
+9051/9051 [==============================] - 81s 9ms/step - loss: 0.4886 - acc: 0.8398 - val_loss: 1.1655 - val_acc: 0.6849
+Epoch 22/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.4294 - acc: 0.8574 - val_loss: 1.0218 - val_acc: 0.7141
+Epoch 23/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.4162 - acc: 0.8671 - val_loss: 0.8506 - val_acc: 0.7720
+Epoch 24/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.3791 - acc: 0.8769 - val_loss: 0.8676 - val_acc: 0.7649
+Epoch 25/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.3361 - acc: 0.8923 - val_loss: 0.8459 - val_acc: 0.7631
+Epoch 26/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.3073 - acc: 0.9007 - val_loss: 0.7080 - val_acc: 0.8025
+Epoch 27/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.2987 - acc: 0.9058 - val_loss: 0.8139 - val_acc: 0.7861
+Epoch 28/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.2729 - acc: 0.9088 - val_loss: 0.8088 - val_acc: 0.7857
+Epoch 29/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.2441 - acc: 0.9197 - val_loss: 0.9027 - val_acc: 0.7746
+Epoch 30/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.2396 - acc: 0.9200 - val_loss: 0.8122 - val_acc: 0.7954
+Epoch 31/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.2301 - acc: 0.9252 - val_loss: 0.7057 - val_acc: 0.8175
+Epoch 32/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.2074 - acc: 0.9329 - val_loss: 0.7111 - val_acc: 0.8285
+Epoch 33/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.1884 - acc: 0.9402 - val_loss: 0.8785 - val_acc: 0.7875
+Epoch 34/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.1617 - acc: 0.9469 - val_loss: 0.8795 - val_acc: 0.7998
+Epoch 35/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.1675 - acc: 0.9434 - val_loss: 0.6844 - val_acc: 0.8352
+Epoch 36/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1545 - acc: 0.9483 - val_loss: 0.8700 - val_acc: 0.7989
+Epoch 37/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.1532 - acc: 0.9496 - val_loss: 0.7870 - val_acc: 0.8042
+Epoch 38/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1277 - acc: 0.9569 - val_loss: 0.8392 - val_acc: 0.8118
+Epoch 39/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1161 - acc: 0.9611 - val_loss: 0.8196 - val_acc: 0.8228
+Epoch 40/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1235 - acc: 0.9581 - val_loss: 0.7595 - val_acc: 0.8299
+Epoch 41/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.1179 - acc: 0.9616 - val_loss: 0.7672 - val_acc: 0.8281
+Epoch 42/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.1074 - acc: 0.9645 - val_loss: 0.6872 - val_acc: 0.8440
+Epoch 43/100
+9051/9051 [==============================] - 82s 9ms/step - loss: 0.0982 - acc: 0.9661 - val_loss: 0.7649 - val_acc: 0.8263
+Epoch 44/100
+9051/9051 [==============================] - 83s 9ms/step - loss: 0.0812 - acc: 0.9730 - val_loss: 0.8217 - val_acc: 0.8268
+Epoch 45/100
+9051/9051 [==============================] - 84s 9ms/step - loss: 0.0834 - acc: 0.9720 - val_loss: 0.8234 - val_acc: 0.8303
+Traceback (most recent call last):
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 282, in __init__
+    fetch, allow_tensor=True, allow_operation=True))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3590, in as_graph_element
+    return self._as_graph_element_locked(obj, allow_tensor, allow_operation)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3679, in _as_graph_element_locked
+    types_str))
+TypeError: Can not convert a History into a Tensor or Operation.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/Neural_Network/task.py", line 205, in <module>
+    task2_lstm()
+  File "/home/changjy/pycharm_mapping/pycharm_project_148/Neural_Network/task.py", line 141, in task2_lstm
+    validation_split=0.2))
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 900, in run
+    run_metadata_ptr)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 427, in __init__
+    self._fetch_mapper = _FetchMapper.for_fetch(fetches)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 253, in for_fetch
+    return _ElementFetchMapper(fetches, contraction_fn)
+  File "/opt/anaconda/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 286, in __init__
+    (fetch, type(fetch), str(e)))
+TypeError: Fetch argument <tensorflow.python.keras._impl.keras.callbacks.History object at 0x7f7fb726b898> has invalid type <class 'tensorflow.python.keras._impl.keras.callbacks.History'>, must be a string or Tensor. (Can not convert a History into a Tensor or Operation.)
+
+Process finished with exit code 1
