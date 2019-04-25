@@ -102,7 +102,7 @@ def task2_lstm(vo_size=10000, maxlen=500):
 
     tokenizer = keras.preprocessing.text.Tokenizer(num_words=vo_size,
                                                    filters='!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n1234567890')
-    tokenizer.fit_on_texts(train_text)
+    tokenizer.fit_on_texts(train_text + test_text)
 
     train_seq = np.array(tokenizer.texts_to_sequences(train_text))
     test_seq = tokenizer.texts_to_sequences(test_text)
@@ -136,11 +136,9 @@ def task2_lstm(vo_size=10000, maxlen=500):
 
     model.compile(optimizer=keras.optimizers.Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
     print(model.summary())
-    with tf.Session(config=config) as sess:
-        sess.run(model.fit(train_seq, train_labels, epochs=100, batch_size=32, callbacks=callbacks,
-                           validation_split=0.2))
+    model.fit(train_seq, train_labels, epochs=100, batch_size=32, callbacks=callbacks,
+                           validation_split=0.2)
 
-    model.save('./my_lstm.h5')
     pass
 
 
@@ -250,4 +248,4 @@ def task2_lstm_post(vo_size=10000, maxlen=500):
 
 
 if __name__ == '__main__':
-    task2_lstm_post()
+    task2_lstm()

@@ -5,7 +5,7 @@ from sklearn.utils import shuffle
 import os
 from matplotlib import pyplot as plt
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 keras = tf.keras
 
@@ -17,6 +17,15 @@ class PrintDot(keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs):
         if epoch % 100 == 0: print('')
         print('.', end='')
+
+
+def cal_coverage(df):
+    """calculate the coverage of the selected sectors."""
+    rst = df > -105
+    rst = rst.sum(axis=1) > 0
+    cov = rst.sum() / rst.shape[0]
+    print(cov)
+    return cov
 
 
 def plot_history(history):
@@ -46,27 +55,32 @@ def plot_history(history):
 
 
 def main():
+    """Find the optimal hyper parameter."""
     # load the data.
     train_data = pd.read_csv('./data/dataAll.csv', index_col=None)
     test_featues = pd.read_csv('./data/testAll.csv', index_col=None)
-
     attrs = []
 
     for band in ('21', '35'):
-        for sector in np.array([1, 3, 8, 9, 13, 15]) - 1:
+        for sector in np.array([1, 2, 3, 5, 7, 9, 10, 11, 12, 13, 14, 15]) - 1:
             attrs.append(band + '00' + str(sector))
 
     train_data = shuffle(train_data)
 
     train_features = train_data.iloc[:, :-2]
+
+    # for col in train_features.columns:
+    #     train_features.loc[train_features.loc[:, col] < -105, col] = -500
+
     train_features = train_features.loc[:, attrs]  # (3863, 30)
+    cal_coverage(train_features)
     train_labels = train_data.iloc[:, -2:]  # (3863, 2)
 
     model = keras.Sequential()
     model.add(tf.keras.layers.Dense(12, activation='relu',
-                                    input_shape=(12,)))
+                                    input_shape=(24,)))
 
-    for width in [12] * 32:  # 32 or 36
+    for width in [24] * 32:  # 32 or 36
         model.add(tf.keras.layers.Dense(width, activation='relu'))
 
     model.add(tf.keras.layers.Dense(2))
@@ -87,6 +101,7 @@ def main():
 
 
 def main_full():
+    """No sector deleted."""
     # load the data.
     train_data = pd.read_csv('./data/dataAll.csv', index_col=None)
     test_featues = pd.read_csv('./data/testAll.csv', index_col=None)
@@ -94,6 +109,11 @@ def main_full():
     train_data = shuffle(train_data)
 
     train_features = train_data.iloc[:, :-2]
+
+    for col in train_features.columns:
+        train_features.loc[train_features.loc[:, col] < -105, col] = -500
+
+    cal_coverage(train_features)
     train_labels = train_data.iloc[:, -2:]  # (3863, 2)
 
     model = keras.Sequential()
@@ -121,6 +141,7 @@ def main_full():
 
 
 def main_post():
+    """Use the estimated optimal hyper parameter."""
     # load the data.
     train_data = pd.read_csv('./data/dataAll.csv', index_col=None)
     test_features = pd.read_csv('./data/testAll.csv', index_col=None)
