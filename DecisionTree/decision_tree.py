@@ -96,8 +96,8 @@ def pre_pruning_recursion(tree, node, data):
     precision_without_prun = (tree.discriminate(data.iloc[:, :-1]) == data.iloc[:, -1]).sum() / data.shape[0]
     temp_children = node.children
     node.children = dict()
-    precision_with_prun = (tree.discriminate(data.iloc[:, :-1]) == data.iloc[:, -1]).sum() / data.shape[0]
-    if precision_without_prun - precision_with_prun < 0.03:
+    precision_with_prune = (tree.discriminate(data.iloc[:, :-1]) == data.iloc[:, -1]).sum() / data.shape[0]
+    if precision_without_prun - precision_with_prune < 0.03:
         node.attr = None
         return
     else:
